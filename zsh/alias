@@ -1,5 +1,0 @@
-alias cp='cp -i'
-
-alias py='/usr/bin/python3'
-
-alias ab='for l in {a..z} ; do echo $l;done;';
