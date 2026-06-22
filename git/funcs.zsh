@@ -79,29 +79,6 @@ function gfr(){
     git fetch $remote $branch
 }
 
-# git restore
-function gitrestore(){
-    if [[ ! -z $1 ]]
-        then
-            iecho "git restore $1"
-            git restore $1
-    else
-        while read file; do
-			echo "Do you wish to restore ${file}?"
-			select yn in Y N; do
-			  case $yn in
-				Y ) 
-                    git restore $file
-                    ;;
-				N ) 
-                    ;;
-			  esac
-            break
-			done
-        done < <(git ls-files --modified)
-    fi
-}
-
 # git add
 unalias ga
 function ga(){
@@ -135,3 +112,4 @@ function gd(){
 function ggg(){
     ga && gci && gl && gh
 }
+
