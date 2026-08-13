@@ -10,4 +10,4 @@ alias abc='for l in {a..z} ; do echo $l;done;';
 
 alias curlx="curl -x socks5h://$proxyhost:$proxyport";
 
-alias dps='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
+alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}"'
