@@ -3,7 +3,7 @@ function x() {
 }
 
 function f(){
-    find . ! -path "./.git/*" ! -path "./vendor/*"! -path "./logs/*" -iname "*$1*"
+    find . ! -path "./.git/*" ! -path "./vendor/*" ! -path "./logs/*" -iname "*$1*"
 }
 
 function h() {
