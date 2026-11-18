@@ -50,10 +50,6 @@ function gci() {
 # git push to paramete specified remote or all remotes
 
 function gh() {
-    if [ ! -d ".git" ]; then  
-        echo "Current directory was not a git repository."
-        exit 1  
-    fi
 
     branch=$(git branch --show-current 2>/dev/null)
     if [ -z "$branch" ]; then
