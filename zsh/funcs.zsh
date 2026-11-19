@@ -3,7 +3,19 @@ function x() {
 }
 
 function f(){
-    find . ! -path "./.git/*" ! -path "./vendor/*" ! -path "./logs/*" -iname "*$1*"
+    if [ $# -eq 0 ]
+    then
+    else
+      find . ! -path "./.git/*" ! -path "./vendor/*" ! -path "./logs/*" -iname "*$1*"
+    fi
+}
+
+function s(){
+    if [ $# -eq 0 ]
+    then
+    else
+      grep -Rli --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=logs --exclude-dir=vendor  $1 .
+    fi
 }
 
 function h() {
